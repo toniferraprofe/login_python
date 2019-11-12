@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+<!-- MAIN -->
+{% block main %}
+<!-- Login -->
+<form action="/" method="post">
+    <input type="email" name="correo" id="correo">
+    <input type="password" name="contrasenya" id="contrasenya">
+    <button type="submit">Entrar</button>
+</form>
+{% if usuario_no == True %}
+    <a href="/registro">Vuelve a intentarlo ó regístrate.</a>
+{% endif %}
+
+{% endblock %}
